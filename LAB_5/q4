@@ -1,0 +1,15 @@
+org 100h
+    
+    mov ax, 2111h
+    rol ax, 01h       ;rotate logical left without carry
+    
+    mov ax, 1111h
+    rol ax, 01h       ;rotate logical left with carry
+    
+    mov ax, 1111h
+    ror ax, 01h       ;rotate right logical without carry
+    
+    mov ax, 1111h
+    rcr ax, 01h       ;rotate right logical with carry
+
+ret

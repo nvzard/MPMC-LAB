@@ -1,0 +1,13 @@
+
+
+Q1. Invert 2nd, 4th and 5th LSB of register DX.
+Q2. Write a program to test the data value stored at memory location 4500H
+    and and identify if it contains even no. of ones or odd no of ones.
+    (Parity Flag)
+Q3. Write a program to solve following equation:
+        
+        (0.75)SI - AX/4 + (16)DX
+
+        Store the result at memory loaction 7000H
+
+Q4. Perform Rotation instructions

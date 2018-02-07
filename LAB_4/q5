@@ -1,0 +1,15 @@
+
+; You may customize this and other start-up templates; 
+; The location of this template is c:\emu8086\inc\0_com_template.txt
+
+org 100h
+
+mov ax, 1231h   ; ax-bx
+mov bx, 3213h
+mov cx, 5341h   ; cx-dx
+mov dx, 8947h
+
+add bx ,dx
+adc ax, cx
+
+ret

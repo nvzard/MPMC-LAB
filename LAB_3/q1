@@ -1,0 +1,21 @@
+
+rg 100h
+
+mov [0700H], 1001H   
+mov [0700H]+2H, 2002H
+mov [0700H]+4H, 3003H
+mov [0700H]+6H, 4004H
+LES AX, [0700H]
+LDS BX, [0700H]+4H
+mov CX, DS       ;CS <-- DS
+mov DX, 0700H    ; DX <-- 0700H
+mov DS, DX ;reset  ;DS <-- 0700H
+mov DX, ES     ; DS <-- ES
+; AX-DX, BX-CX 
+
+mov [0700H]+4H, AX
+mov [0700H]+6H, DX
+mov [0700H], BX
+mov [0700H]+2H, CX
+
+ret

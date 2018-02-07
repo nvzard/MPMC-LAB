@@ -1,0 +1,24 @@
+org 100h
+
+    ;EQN-> (0.75)SI - AX/4 + (16)DX  -> [7000h]
+    ;       (SI)/2^1 + (SI)/2^2 + (2^4)*DX - AX/2^2
+    
+    mov SI, 3333h
+    mov DX, 1111h
+    mov AX, 0111h
+    
+    mov BX, SI
+    SHR BX, 01H        ; (SI)/2^1
+    add [7000h], BX
+    
+    mov BX, SI
+    SHR BX, 02H        ;   + (SI)/2^2
+    add [7000h], BX
+    
+    mov BX, DX         ; + (2^4)*DX
+    SHR BX, 04H
+    add [7000h], BX
+    
+    mov BX, AX         ; - AX/2^2
+    SHR BX, 02h
+    sub [7000h], BX

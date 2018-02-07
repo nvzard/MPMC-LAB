@@ -1,0 +1,12 @@
+Aim: Introduction to 8086 emulator
+
+Software: emu8086
+
+CODE:
+
+mov ax, 1034H
+mov bx, 1001H
+Add AX, BX
+
+
+Write points/notes what is explained in class
